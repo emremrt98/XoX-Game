@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
-export default function Xox({ state, setState }) {
+export default function Xox({ state, setState, value, }) {
     const [word, setWord] = useState("");
     const [color, setColor] = useState("");
     const update = () => {
-
         if (state) {
             setWord("X");
             setColor("x")
@@ -13,10 +12,10 @@ export default function Xox({ state, setState }) {
             setWord("O");
             setColor("o")
         }
-        setState(!state)
 
+        setState(!state)
     }
-    useEffect(() => console.log(state), [state]);
+
 
     return (
         <div>
