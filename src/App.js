@@ -18,55 +18,52 @@ function App() {
     a8: ""
   })
   const [res, setRes] = useState("");
+
   const result = () => {
     if (state === true) {
       setRes("Kazanan O");
     } else {
-      setRes("Kazanan X")
+      setRes("Kazanan X");
     }
   }
 
   useEffect(() => {
     const { a0, a1, a2, a3, a4, a5, a6, a7, a8 } = control;
-    let loseOrWin = false;
 
 
     if ((a0 === 'X' && a1 === 'X' && a2 === 'X') || (a0 === 'O' && a1 === 'O' && a2 === 'O')) {
-      loseOrWin = true;
+
       result();
 
     } else if ((a3 === 'X' && a4 === 'X' && a5 === 'X') || (a3 === 'O' && a4 === 'O' && a5 === 'O')) {
-      loseOrWin = true;
+
       result();
 
     } else if ((a6 === 'X' && a7 === 'X' && a8 === 'X') || (a6 === 'O' && a7 === 'O' && a8 === 'O')) {
-      loseOrWin = true;
+
       result();
 
     } else if ((a0 === 'X' && a4 === 'X' && a8 === 'X') || (a0 === 'O' && a4 === 'O' && a8 === 'O')) {
-      loseOrWin = true;
+
       result();
 
     } else if ((a6 === 'X' && a4 === 'X' && a2 === 'X') || (a6 === 'O' && a4 === 'O' && a2 === 'O')) {
-      loseOrWin = true;
+
       result();
 
     } else if ((a6 === 'X' && a3 === 'X' && a0 === 'X') || (a6 === 'O' && a3 === 'O' && a0 === 'O')) {
-      loseOrWin = true;
+
       result();
 
     } else if ((a1 === 'X' && a4 === 'X' && a7 === 'X') || (a1 === 'O' && a4 === 'O' && a7 === 'O')) {
-      loseOrWin = true;
+
       result();
 
     } else if ((a2 === 'X' && a5 === 'X' && a8 === 'X') || (a2 === 'O' && a5 === 'O' && a8 === 'O')) {
-      loseOrWin = true;
+
       result();
 
-    }
-
-    else if (a0 !== '' && a1 !== '' && a2 !== '' && a3 !== '' && a4 !== '' && a5 !== '' && a6 !== '' && a7 !== '' && a8 !== '' && state === false) {
-
+    } else if (a0 !== '' && a1 !== '' && a2 !== '' && a3 !== '' && a4 !== '' && a5 !== '' && a6 !== '' && a7 !== '' && a8 !== '') {
       setRes("Berabere")
     }
 

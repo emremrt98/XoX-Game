@@ -7,12 +7,12 @@ export default function Xox({ state, setState, value, setControl }) {
 
         if (state) {
             setWord("X");
-            setColor("x")
+            setColor("x");
             setControl(prevList => ({ ...prevList, [value]: "X" }))
         }
         else {
             setWord("O");
-            setColor("o")
+            setColor("o");
             setControl(prevList => ({ ...prevList, [value]: "O" }))
         }
 
